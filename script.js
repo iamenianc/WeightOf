@@ -50,9 +50,10 @@ const els = LINES.map((L)=>{
   const [t,text,sec] = L;
   const div = document.createElement('div');
   div.className = 'line '+sec;
-  text.split(' ').forEach((w,wi)=>{
+  const wordsArray = text.split(' ');
+  wordsArray.forEach((w,wi)=>{
     const s=document.createElement('span');
-    s.className='word'; s.textContent=w+' ';
+    s.className='word'; s.textContent=w;
     s.style.transitionDelay=(wi*0.085)+'s';
     
     // Check for emphasis words (hope, seen, see, christ) ignoring punctuation and case
@@ -62,6 +63,9 @@ const els = LINES.map((L)=>{
     }
     
     div.appendChild(s);
+    if (wi < wordsArray.length - 1) {
+      div.appendChild(document.createTextNode(' '));
+    }
   });
   stage.appendChild(div);
   return {t, el:div, words:[...div.querySelectorAll('.word')]};

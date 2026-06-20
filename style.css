@@ -168,8 +168,7 @@ body:not(.playing) #bar.show { opacity:1; }
 /* ---- word emphasis highlights ---- */
 .word.emphasis {
   font-weight: 600;
-  color: #4e463d; /* Elegant, subtle warm charcoal matching the theme */
-  letter-spacing: 0.05em; /* Clear letter-spacing spacing */
+  color: #000000; /* Pure black text color as requested */
   transform: translateY(0.3em) scale(0.95);
   filter: blur(8px);
   transition: opacity 1.1s cubic-bezier(.16, 1, 0.3, 1),
