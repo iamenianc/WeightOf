@@ -151,3 +151,16 @@ addEventListener('keydown',e=>{
   if(e.key==='ArrowRight') aud.currentTime=Math.min((aud.duration||0),aud.currentTime+5);
   if(e.key==='ArrowLeft')  aud.currentTime=Math.max(0,aud.currentTime-5);
 });
+
+/* ---------- attribution overlay triggers ---------- */
+const attribution = document.getElementById('attribution');
+const closeAttr = document.getElementById('close-attr');
+
+aud.addEventListener('ended', () => {
+  attribution.classList.remove('hide');
+});
+
+closeAttr.addEventListener('click', () => {
+  attribution.classList.add('hide');
+});
+

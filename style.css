@@ -68,3 +68,100 @@ body:not(.playing) #bar.show { opacity:1; }
 #track { position:absolute; left:0; right:0; height:3px; background:rgba(42,39,34,.16); border-radius:2px; }
 #fill { position:absolute; left:0; height:3px; background:#2a2722; border-radius:2px; width:0%; }
 #knob { position:absolute; width:11px; height:11px; border-radius:50%; background:#2a2722; left:0; transform:translateX(-50%); }
+
+/* ---- attribution overlay ---- */
+#attribution {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  background: rgba(253, 253, 251, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 1.2s ease, pointer-events 1.2s ease;
+  font-family: 'Cambria', 'Georgia', serif;
+  color: #2a2722;
+  padding: 24px;
+}
+#attribution.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+.attr-card {
+  background: rgba(253, 253, 251, 0.95);
+  border: 1px solid rgba(42, 39, 34, 0.08);
+  box-shadow: 0 20px 40px rgba(42, 39, 34, 0.06);
+  padding: 40px;
+  border-radius: 8px;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  will-change: transform, opacity;
+  animation: slideUp 1.0s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.attr-card h3 {
+  font-family: 'Constantia', 'Cambria', 'Georgia', serif;
+  font-size: 28px;
+  font-weight: 300;
+  margin-bottom: 24px;
+  letter-spacing: 0.02em;
+}
+.attr-divider {
+  height: 1px;
+  background: rgba(42, 39, 34, 0.08);
+  margin: 0 auto 24px;
+  width: 60px;
+}
+.attr-row {
+  margin-bottom: 20px;
+  text-align: left;
+}
+.attr-label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #8b8070;
+  margin-bottom: 4px;
+}
+.attr-value {
+  display: block;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+.attr-footer {
+  margin-top: 36px;
+}
+.attr-footer p {
+  font-size: 12px;
+  color: #8b8070;
+  margin-bottom: 20px;
+  letter-spacing: 0.02em;
+}
+#close-attr {
+  background: #2a2722;
+  color: #fdfdfb;
+  border: none;
+  padding: 12px 28px;
+  font-family: 'Cambria', 'Georgia', serif;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+#close-attr:hover {
+  background: #4a4640;
+  transform: translateY(-1px);
+}
+#close-attr:active {
+  transform: translateY(0);
+}
+
