@@ -54,6 +54,13 @@ const els = LINES.map((L)=>{
     const s=document.createElement('span');
     s.className='word'; s.textContent=w+' ';
     s.style.transitionDelay=(wi*0.085)+'s';
+    
+    // Check for emphasis words (hope, seen, see) ignoring punctuation and case
+    const cleanWord = w.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()…?"']/g,"");
+    if (cleanWord === 'hope' || cleanWord === 'seen' || cleanWord === 'see') {
+      s.classList.add('emphasis');
+    }
+    
     div.appendChild(s);
   });
   stage.appendChild(div);
@@ -127,7 +134,7 @@ function loop(){
 
 /* ---------- abstract generative art ---------- */
 const ARTWORK_STRENGTH = 2.0; // Adjusts the opacity/strength of the colored artwork (1.0 = default, 2.0 = stronger, 0.5 = weaker)
-const ARTWORK_SIZE     = 2.0; // Adjusts the diameter/size of the colored blobs (1.0 = default, 1.5 = larger, 0.7 = smaller)
+const ARTWORK_SIZE     = 1.1; // Adjusts the diameter/size of the colored blobs (1.0 = default, 1.5 = larger, 0.7 = smaller)
 const ARTWORK_SPEED    = 4.0; // Adjusts the speed of the blob movement animation (1.0 = default, 2.0 = double speed, 0.5 = half speed)
 const cv = document.getElementById('art');
 const ctx = cv.getContext('2d');
