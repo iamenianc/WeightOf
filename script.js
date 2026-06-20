@@ -70,8 +70,16 @@ function syncLines(force){
   let idx=-1;
   for(let i=0;i<els.length;i++){ if(els[i].t<=t) idx=i; else break; }
   if(idx!==cur || force){
-    els.forEach((o,i)=>{ if(i!==idx){ o.el.classList.remove('out'); o.words.forEach(w=>w.classList.remove('in')); } });
-    if(idx>=0) showLine(idx);
+    els.forEach((o,i)=>{
+      if(i===idx) {
+        showLine(i);
+      } else if (i === cur) {
+        hideLine(i);
+      } else {
+        o.el.classList.remove('out');
+        o.words.forEach(w=>w.classList.remove('in'));
+      }
+    });
     cur=idx;
   }
 }
