@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(whisper \"weight.mp3\" --model medium --word_timestamps True --output_format srt)",
+      "PowerShell(python -c \"import site; print\\(site.getsitepackages\\(\\)\\)\")",
+      "PowerShell(python -c \"import site; import os; scripts = os.path.join\\(os.path.dirname\\(site.getsitepackages\\(\\)[0]\\), 'Scripts'\\); print\\(scripts\\)\")",
+      "Read(//c/Users/ianch/AppData/Local/Python/**)",
+      "PowerShell(python -m site)",
+      "PowerShell(python -m whisper \"weight.mp3\" --model medium --word_timestamps True --output_format srt)",
+      "Read(//c/Users/ianch/sourecode/repos/Music/**)",
+      "PowerShell(pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118)",
+      "PowerShell(pip install faster-whisper)",
+      "PowerShell(pip install intel-extension-for-pytorch)"
+    ]
+  }
+}
