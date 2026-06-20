@@ -1,4 +1,40 @@
-const LINES = [[13.0, "He carried our sins, on that rugged tree", "v"], [18.5, "to win our pardon and our victory.", "v"], [24.0, "In jars of clay we carry the news:", "v"], [29.5, "Christ is risen\u2026", "v"], [33.0, "Grace has broken through.", "v"], [38.0, "No condemnation now is ours to dread\u2026", "v"], [44.0, "by your word the faintest soul is fed.", "v"], [50.0, "We have believed and so we loudly speak", "v"], [56.0, "the name of Jesus", "v"], [59.5, "Strength unto the Weak.", "v"], [64.0, "We do not Hope", "c"], [67.0, "in what is seen", "c"], [70.0, "But cling to Christ our certainty", "c"], [75.0, "The weight of glory yet to come", "c"], [80.0, "it's the song of heaven now begun.", "c"], [85.0, "it's the song of heaven now begun.", "c"], [90.0, "A new life we live,", "v"], [94.0, "by his mighty hand,", "v"], [98.0, "Through every grief, to the promised Land", "v"], [104.0, "The Spirit's here, he knows our needs", "v"], [110.0, "and from his throne, our saviour intercedes", "v"], [117.0, "We do not hope", "c"], [120.0, "in what is seen", "c"], [123.0, "But cling to Christ our certainty", "c"], [128.0, "The weight of glory yet to come", "c"], [133.0, "it's the song of heaven now begun.", "c"], [138.0, "it's the song of heaven now begun.", "c"], [144.0, "We do not hope in what is seen", "c"], [149.0, "But cling to Christ our certainty", "c"], [154.0, "The weight of glory yet to come", "c"], [159.0, "it's the song of heaven now begun.", "c"], [164.0, "it's the song of heaven now begun.", "c"], [172.0, "Beyond the reach of mortal sight,", "b"], [176.5, "yet clearer still, than brightest Light,", "b"], [181.0, "In every trial and every fall,", "b"], [185.5, "the hope of glory outweighs them all", "b"], [192.0, "We do not hope in what is seen", "c"], [197.0, "But cling to Christ our certainty", "c"], [202.0, "The weight of glory yet to come", "c"], [207.0, "it's the song of heaven now begun.", "c"], [213.0, "We do not hope in what is seen", "c"], [218.0, "But cling to Christ our certainty", "c"], [223.0, "The weight of glory yet to come", "c"], [228.0, "it's the song of heaven now begun.", "c"], [233.0, "it's the song of heaven now begun.", "c"]];
+const LINES = [
+  [11.340, "He carried our sins on that rugged tree", "v"],
+  [18.660, "To win our pardon and our victory", "v"],
+  [24.080, "In jars of clay we carry the news", "v"],
+  [30.720, "Christ is risen, grace has broken through", "v"],
+  [37.320, "No condemnation now is ours to dread", "v"],
+  [44.080, "By Your Word the faintest soul is fed", "v"],
+  [49.620, "We have believed and so we loudly speak", "v"],
+  [56.380, "The name of Jesus strength unto the weak", "v"],
+  [62.580, "We do not hope in what is seen", "c"],
+  [69.180, "But cling to Christ our certainty", "c"],
+  [75.040, "The weight of glory yet to come", "c"],
+  [81.740, "It's the song of heaven now begun", "c"],
+  [88.160, "It's the song of heaven now begun", "c"],
+  [97.600, "A new life we live by His mighty hand", "v"],
+  [104.240, "Through every grief to the promised land", "v"],
+  [110.820, "The Spirit's here, He knows our needs", "v"],
+  [117.280, "And from His throne our Savior intercedes", "v"],
+  [124.120, "We do not hope in what is seen", "c"],
+  [129.940, "But cling to Christ our certainty", "c"],
+  [135.800, "The weight of glory yet to come", "c"],
+  [142.740, "It's the song of heaven now begun", "c"],
+  [148.700, "It's the song of heaven now begun", "c"],
+  [168.580, "Beyond the reach of mortal sight", "b"],
+  [174.780, "Yet clearer still than brightest light", "b"],
+  [181.940, "In every trial and every fall", "b"],
+  [187.780, "The hope of glory outweighs them all", "b"],
+  [195.140, "We do not hope in what is seen", "c"],
+  [200.640, "But cling to Christ our certainty", "c"],
+  [206.340, "The weight of glory yet to come", "c"],
+  [213.200, "It's the song of heaven now begun", "c"],
+  [219.380, "We do not hope in what is seen", "c"],
+  [226.160, "But cling to Christ our certainty", "c"],
+  [231.880, "The weight of glory yet to come", "c"],
+  [238.460, "It's the song of heaven now begun", "c"],
+  [244.660, "It's the song of heaven now begun", "c"]
+];
 const aud   = document.getElementById('aud');
 const stage = document.getElementById('stage');
 const gate  = document.getElementById('gate');
