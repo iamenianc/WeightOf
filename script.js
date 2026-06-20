@@ -84,7 +84,7 @@ function loop(){
 /* ---------- abstract generative art ---------- */
 const ARTWORK_STRENGTH = 2.0; // Adjusts the opacity/strength of the colored artwork (1.0 = default, 2.0 = stronger, 0.5 = weaker)
 const ARTWORK_SIZE     = 1.6; // Adjusts the diameter/size of the colored blobs (1.0 = default, 1.5 = larger, 0.7 = smaller)
-const ARTWORK_SPEED    = 2.0; // Adjusts the speed of the blob movement animation (1.0 = default, 2.0 = double speed, 0.5 = half speed)
+const ARTWORK_SPEED    = 3.0; // Adjusts the speed of the blob movement animation (1.0 = default, 2.0 = double speed, 0.5 = half speed)
 const cv = document.getElementById('art');
 const ctx = cv.getContext('2d');
 let W,H,DPR;
@@ -116,7 +116,7 @@ function paint(){
     let s=0; for(let i=0;i<24;i++) s+=freqData[i];
     level += ((s/24/255) - level)*0.08;
   } else { level += ((aud.paused?0.12:0.32) - level)*0.04; }
-  tt+=0.0045 * ARTWORK_SPEED;
+  tt = (tt + 0.0045 * ARTWORK_SPEED) % 10000;
   ctx.clearRect(0,0,W,H);
   ctx.globalCompositeOperation='multiply';
   blobs.forEach(b=>{
