@@ -83,8 +83,8 @@ function loop(){
 
 /* ---------- abstract generative art ---------- */
 const ARTWORK_STRENGTH = 2.0; // Adjusts the opacity/strength of the colored artwork (1.0 = default, 2.0 = stronger, 0.5 = weaker)
-const ARTWORK_SIZE     = 1.6; // Adjusts the diameter/size of the colored blobs (1.0 = default, 1.5 = larger, 0.7 = smaller)
-const ARTWORK_SPEED    = 3.0; // Adjusts the speed of the blob movement animation (1.0 = default, 2.0 = double speed, 0.5 = half speed)
+const ARTWORK_SIZE     = 2.0; // Adjusts the diameter/size of the colored blobs (1.0 = default, 1.5 = larger, 0.7 = smaller)
+const ARTWORK_SPEED    = 4.0; // Adjusts the speed of the blob movement animation (1.0 = default, 2.0 = double speed, 0.5 = half speed)
 const cv = document.getElementById('art');
 const ctx = cv.getContext('2d');
 let W,H,DPR;
@@ -116,15 +116,15 @@ function paint(){
     let s=0; for(let i=0;i<24;i++) s+=freqData[i];
     level += ((s/24/255) - level)*0.08;
   } else { level += ((aud.paused?0.12:0.32) - level)*0.04; }
-  tt = (tt + 0.0045 * ARTWORK_SPEED) % 10000;
+  tt = (tt + 0.0045 * ARTWORK_SPEED + 10000) % 10000;
   ctx.clearRect(0,0,W,H);
   ctx.globalCompositeOperation='multiply';
   blobs.forEach(b=>{
     const cx=(b.x + Math.sin(tt*b.sp*6+b.ph)*0.13)*W;
     const cy=(b.y + Math.cos(tt*b.sp*5+b.ph*1.3)*0.13)*H;
-    const rad=(b.r*(1+level*0.5))*Math.min(W,H)*ARTWORK_SIZE;
+    const rad=Math.max(0, (b.r*(1+level*0.5))*Math.min(W,H)*ARTWORK_SIZE);
     const g=ctx.createRadialGradient(cx,cy,0,cx,cy,rad);
-    const alpha=Math.min(1.0, (0.18+level*0.12)*ARTWORK_STRENGTH);
+    const alpha=Math.max(0.0, Math.min(1.0, (0.18+level*0.12)*ARTWORK_STRENGTH));
     g.addColorStop(0,'hsla('+b.hue+',60%,70%,'+alpha+')');
     g.addColorStop(1,'hsla('+b.hue+',60%,70%,0)');
     ctx.fillStyle=g;
