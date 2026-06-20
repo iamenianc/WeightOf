@@ -2,7 +2,7 @@
   "file": "weight.mp3",
   "duration": 0,
   "language": "en",
-  "full_text": " Music Hmm He carried our sins on that rugged tree To win our pardon and our victory In jaws of clay we carry the news Christ is risen, grace has broken through No condemnation now is ours to dread By your word the faintest soul is fed We have believed and so we loudly speak The name of Jesus strengthens to the weak We do not hope in what is seen But cling to Christ our certainty The weight of the warrior yet to come It's the song of heaven now begun It's the song of heaven now begun Hmm And you life we live by his mighty hand Through every grief to the promised land The spirit's healing, he loves our needs And from his throne our Savior intercedes We do not hope in what is seen But cling to Christ our certainty The weight of glory yet to come It's the song of heaven now begun It's the song of heaven now begun Hmm Beyond the reach of mortal sight Yet clearer still than brightest light In every trial and every fall The hope of glory how to raise them all We do not hope in what is seen But cling to Christ our certainty The weight of glory yet to come It's the song of heaven now begun We do not hope in what is seen But cling to Christ our certainty The weight of glory yet to come It's the song of heaven now begun It's the song of heaven now begun",
+  "full_text": "Music Hmm He carried our sins on that rugged tree To win our pardon and our victory In jars of clay we carry the news Christ is risen, grace has broken through No condemnation now is ours to dread By Your Word the faintest soul is fed We have believed and so we loudly speak The name of Jesus strength unto the weak We do not hope in what is seen But cling to Christ our certainty The weight of glory yet to come It's the song of heaven now begun It's the song of heaven now begun Hmm A new life we live by His mighty hand Through every grief to the promised land The Spirit's here, He knows our needs And from His throne our Savior intercedes We do not hope in what is seen But cling to Christ our certainty The weight of glory yet to come It's the song of heaven now begun It's the song of heaven now begun Hmm Beyond the reach of mortal sight Yet clearer still than brightest light In every trial and every fall The hope of glory outweighs them all We do not hope in what is seen But cling to Christ our certainty The weight of glory yet to come It's the song of heaven now begun We do not hope in what is seen But cling to Christ our certainty The weight of glory yet to come It's the song of heaven now begun It's the song of heaven now begun",
   "words": [
     {
       "word": "Music",
@@ -113,7 +113,7 @@
       "duration": 0.75
     },
     {
-      "word": "jaws",
+      "word": "jars",
       "start": 25.75,
       "end": 26.5,
       "duration": 0.75
@@ -245,13 +245,13 @@
       "duration": 0.75
     },
     {
-      "word": "your",
+      "word": "Your",
       "start": 44.75,
       "end": 45.5,
       "duration": 0.75
     },
     {
-      "word": "word",
+      "word": "Word",
       "start": 45.5,
       "end": 46.25,
       "duration": 0.75
@@ -359,13 +359,13 @@
       "duration": 0.875
     },
     {
-      "word": "strengthens",
+      "word": "strength",
       "start": 59.5,
       "end": 60.375,
       "duration": 0.875
     },
     {
-      "word": "to",
+      "word": "unto",
       "start": 60.375,
       "end": 61.25,
       "duration": 0.875
@@ -432,38 +432,38 @@
     },
     {
       "word": "But",
-      "start": 69.0,
-      "end": 70.167,
+      "start": 68.5,
+      "end": 69.667,
       "duration": 1.167
     },
     {
       "word": "cling",
-      "start": 70.167,
-      "end": 71.333,
+      "start": 69.667,
+      "end": 70.833,
       "duration": 1.167
     },
     {
       "word": "to",
-      "start": 71.333,
-      "end": 72.5,
+      "start": 70.833,
+      "end": 72.0,
       "duration": 1.167
     },
     {
       "word": "Christ",
-      "start": 72.5,
-      "end": 73.667,
+      "start": 72.0,
+      "end": 73.167,
       "duration": 1.167
     },
     {
       "word": "our",
-      "start": 73.667,
-      "end": 74.833,
+      "start": 73.167,
+      "end": 74.333,
       "duration": 1.167
     },
     {
       "word": "certainty",
-      "start": 74.833,
-      "end": 76.0,
+      "start": 74.333,
+      "end": 75.5,
       "duration": 1.167
     },
     {
@@ -485,13 +485,7 @@
       "duration": 0.875
     },
     {
-      "word": "the",
-      "start": 78.625,
-      "end": 79.5,
-      "duration": 0.875
-    },
-    {
-      "word": "warrior",
+      "word": "glory",
       "start": 79.5,
       "end": 80.375,
       "duration": 0.875
@@ -534,26 +528,26 @@
     },
     {
       "word": "of",
-      "start": 85.571,
-      "end": 86.429,
+      "start": 85.071,
+      "end": 85.929,
       "duration": 0.857
     },
     {
       "word": "heaven",
-      "start": 86.429,
-      "end": 87.286,
+      "start": 85.929,
+      "end": 86.786,
       "duration": 0.857
     },
     {
       "word": "now",
-      "start": 87.286,
-      "end": 88.143,
+      "start": 86.786,
+      "end": 87.643,
       "duration": 0.857
     },
     {
       "word": "begun",
-      "start": 88.143,
-      "end": 89.0,
+      "start": 87.643,
+      "end": 88.5,
       "duration": 0.857
     },
     {
@@ -576,26 +570,26 @@
     },
     {
       "word": "of",
-      "start": 92.0,
-      "end": 93.0,
+      "start": 91.5,
+      "end": 92.5,
       "duration": 1.0
     },
     {
       "word": "heaven",
-      "start": 93.0,
-      "end": 94.0,
+      "start": 92.5,
+      "end": 93.5,
       "duration": 1.0
     },
     {
       "word": "now",
-      "start": 94.0,
-      "end": 95.0,
+      "start": 93.5,
+      "end": 94.5,
       "duration": 1.0
     },
     {
       "word": "begun",
-      "start": 95.0,
-      "end": 96.0,
+      "start": 94.5,
+      "end": 95.5,
       "duration": 1.0
     },
     {
@@ -605,13 +599,13 @@
       "duration": 3.0
     },
     {
-      "word": "And",
+      "word": "A",
       "start": 99.0,
       "end": 99.667,
       "duration": 0.667
     },
     {
-      "word": "you",
+      "word": "new",
       "start": 99.667,
       "end": 100.333,
       "duration": 0.667
@@ -641,7 +635,7 @@
       "duration": 0.667
     },
     {
-      "word": "his",
+      "word": "His",
       "start": 103.0,
       "end": 103.667,
       "duration": 0.667
@@ -707,25 +701,25 @@
       "duration": 1.0
     },
     {
-      "word": "spirit's",
+      "word": "Spirit's",
       "start": 112.0,
       "end": 113.0,
       "duration": 1.0
     },
     {
-      "word": "healing,",
+      "word": "here,",
       "start": 113.0,
       "end": 114.0,
       "duration": 1.0
     },
     {
-      "word": "he",
+      "word": "He",
       "start": 114.0,
       "end": 115.0,
       "duration": 1.0
     },
     {
-      "word": "loves",
+      "word": "knows",
       "start": 115.0,
       "end": 116.0,
       "duration": 1.0
@@ -755,7 +749,7 @@
       "duration": 0.857
     },
     {
-      "word": "his",
+      "word": "His",
       "start": 119.714,
       "end": 120.571,
       "duration": 0.857
@@ -834,165 +828,165 @@
     },
     {
       "word": "But",
-      "start": 130.0,
-      "end": 131.0,
-      "duration": 1.0
+      "start": 129.5,
+      "end": 130.667,
+      "duration": 1.167
     },
     {
       "word": "cling",
-      "start": 131.0,
-      "end": 132.0,
-      "duration": 1.0
+      "start": 130.667,
+      "end": 131.833,
+      "duration": 1.167
     },
     {
       "word": "to",
-      "start": 132.0,
+      "start": 131.833,
       "end": 133.0,
-      "duration": 1.0
+      "duration": 1.167
     },
     {
       "word": "Christ",
       "start": 133.0,
-      "end": 134.0,
-      "duration": 1.0
+      "end": 134.167,
+      "duration": 1.167
     },
     {
       "word": "our",
-      "start": 134.0,
-      "end": 135.0,
-      "duration": 1.0
+      "start": 134.167,
+      "end": 135.333,
+      "duration": 1.167
     },
     {
       "word": "certainty",
-      "start": 135.0,
-      "end": 136.0,
-      "duration": 1.0
+      "start": 135.333,
+      "end": 136.5,
+      "duration": 1.167
     },
     {
       "word": "The",
-      "start": 136.0,
-      "end": 137.0,
-      "duration": 1.0
+      "start": 137.0,
+      "end": 137.875,
+      "duration": 0.875
     },
     {
       "word": "weight",
-      "start": 137.0,
-      "end": 138.0,
-      "duration": 1.0
+      "start": 137.875,
+      "end": 138.75,
+      "duration": 0.875
     },
     {
       "word": "of",
-      "start": 138.0,
-      "end": 139.0,
-      "duration": 1.0
+      "start": 138.75,
+      "end": 139.625,
+      "duration": 0.875
     },
     {
       "word": "glory",
-      "start": 139.0,
-      "end": 140.0,
-      "duration": 1.0
+      "start": 140.5,
+      "end": 141.375,
+      "duration": 0.875
     },
     {
       "word": "yet",
-      "start": 140.0,
-      "end": 141.0,
-      "duration": 1.0
+      "start": 141.375,
+      "end": 142.25,
+      "duration": 0.875
     },
     {
       "word": "to",
-      "start": 141.0,
-      "end": 142.0,
-      "duration": 1.0
+      "start": 142.25,
+      "end": 143.125,
+      "duration": 0.875
     },
     {
       "word": "come",
-      "start": 142.0,
-      "end": 143.0,
-      "duration": 1.0
+      "start": 143.125,
+      "end": 144.0,
+      "duration": 0.875
     },
     {
       "word": "It's",
-      "start": 143.0,
-      "end": 144.0,
-      "duration": 1.0
+      "start": 144.0,
+      "end": 144.857,
+      "duration": 0.857
     },
     {
       "word": "the",
-      "start": 144.0,
-      "end": 145.0,
-      "duration": 1.0
+      "start": 144.857,
+      "end": 145.714,
+      "duration": 0.857
     },
     {
       "word": "song",
-      "start": 145.0,
-      "end": 146.0,
-      "duration": 1.0
+      "start": 145.714,
+      "end": 146.571,
+      "duration": 0.857
     },
     {
       "word": "of",
-      "start": 146.0,
-      "end": 147.0,
-      "duration": 1.0
+      "start": 146.071,
+      "end": 146.929,
+      "duration": 0.857
     },
     {
       "word": "heaven",
-      "start": 147.0,
-      "end": 148.0,
-      "duration": 1.0
+      "start": 146.929,
+      "end": 147.786,
+      "duration": 0.857
     },
     {
       "word": "now",
-      "start": 148.0,
-      "end": 149.0,
-      "duration": 1.0
+      "start": 147.786,
+      "end": 148.643,
+      "duration": 0.857
     },
     {
       "word": "begun",
-      "start": 149.0,
-      "end": 150.0,
-      "duration": 1.0
+      "start": 148.643,
+      "end": 149.5,
+      "duration": 0.857
     },
     {
       "word": "It's",
       "start": 150.0,
-      "end": 150.857,
-      "duration": 0.857
+      "end": 151.0,
+      "duration": 1.0
     },
     {
       "word": "the",
-      "start": 150.857,
-      "end": 151.714,
-      "duration": 0.857
+      "start": 151.0,
+      "end": 152.0,
+      "duration": 1.0
     },
     {
       "word": "song",
-      "start": 151.714,
-      "end": 152.571,
-      "duration": 0.857
+      "start": 152.0,
+      "end": 153.0,
+      "duration": 1.0
     },
     {
       "word": "of",
-      "start": 152.571,
-      "end": 153.429,
-      "duration": 0.857
+      "start": 152.5,
+      "end": 153.5,
+      "duration": 1.0
     },
     {
       "word": "heaven",
-      "start": 153.429,
-      "end": 154.286,
-      "duration": 0.857
+      "start": 153.5,
+      "end": 154.5,
+      "duration": 1.0
     },
     {
       "word": "now",
-      "start": 154.286,
-      "end": 155.143,
-      "duration": 0.857
+      "start": 154.5,
+      "end": 155.5,
+      "duration": 1.0
     },
     {
       "word": "begun",
-      "start": 155.143,
-      "end": 156.0,
-      "duration": 0.857
+      "start": 155.5,
+      "end": 156.5,
+      "duration": 1.0
     },
     {
       "word": "Hmm",
@@ -1133,33 +1127,21 @@
       "duration": 0.778
     },
     {
-      "word": "how",
-      "start": 191.111,
-      "end": 191.889,
-      "duration": 0.778
-    },
-    {
-      "word": "to",
-      "start": 191.889,
-      "end": 192.667,
-      "duration": 0.778
-    },
-    {
-      "word": "raise",
-      "start": 192.667,
-      "end": 193.444,
+      "word": "outweighs",
+      "start": 192.367,
+      "end": 193.144,
       "duration": 0.778
     },
     {
       "word": "them",
-      "start": 193.444,
-      "end": 194.222,
+      "start": 193.144,
+      "end": 193.922,
       "duration": 0.778
     },
     {
       "word": "all",
-      "start": 194.222,
-      "end": 195.0,
+      "start": 193.922,
+      "end": 194.7,
       "duration": 0.778
     },
     {
@@ -1212,122 +1194,122 @@
     },
     {
       "word": "But",
-      "start": 201.0,
-      "end": 202.0,
-      "duration": 1.0
+      "start": 200.5,
+      "end": 201.667,
+      "duration": 1.167
     },
     {
       "word": "cling",
-      "start": 202.0,
-      "end": 203.0,
-      "duration": 1.0
+      "start": 201.667,
+      "end": 202.833,
+      "duration": 1.167
     },
     {
       "word": "to",
-      "start": 203.0,
+      "start": 202.833,
       "end": 204.0,
-      "duration": 1.0
+      "duration": 1.167
     },
     {
       "word": "Christ",
       "start": 204.0,
-      "end": 205.0,
-      "duration": 1.0
+      "end": 205.167,
+      "duration": 1.167
     },
     {
       "word": "our",
-      "start": 205.0,
-      "end": 206.0,
-      "duration": 1.0
+      "start": 205.167,
+      "end": 206.333,
+      "duration": 1.167
     },
     {
       "word": "certainty",
-      "start": 206.0,
-      "end": 207.0,
-      "duration": 1.0
+      "start": 206.333,
+      "end": 207.5,
+      "duration": 1.167
     },
     {
       "word": "The",
-      "start": 207.0,
-      "end": 208.0,
-      "duration": 1.0
+      "start": 208.0,
+      "end": 208.875,
+      "duration": 0.875
     },
     {
       "word": "weight",
-      "start": 208.0,
-      "end": 209.0,
-      "duration": 1.0
+      "start": 208.875,
+      "end": 209.75,
+      "duration": 0.875
     },
     {
       "word": "of",
-      "start": 209.0,
-      "end": 210.0,
-      "duration": 1.0
+      "start": 209.75,
+      "end": 210.625,
+      "duration": 0.875
     },
     {
       "word": "glory",
-      "start": 210.0,
-      "end": 211.0,
-      "duration": 1.0
+      "start": 211.5,
+      "end": 212.375,
+      "duration": 0.875
     },
     {
       "word": "yet",
-      "start": 211.0,
-      "end": 212.0,
-      "duration": 1.0
+      "start": 212.375,
+      "end": 213.25,
+      "duration": 0.875
     },
     {
       "word": "to",
-      "start": 212.0,
-      "end": 213.0,
-      "duration": 1.0
+      "start": 213.25,
+      "end": 214.125,
+      "duration": 0.875
     },
     {
       "word": "come",
-      "start": 213.0,
-      "end": 214.0,
-      "duration": 1.0
+      "start": 214.125,
+      "end": 215.0,
+      "duration": 0.875
     },
     {
       "word": "It's",
-      "start": 214.0,
-      "end": 214.857,
+      "start": 215.0,
+      "end": 215.857,
       "duration": 0.857
     },
     {
       "word": "the",
-      "start": 214.857,
-      "end": 215.714,
+      "start": 215.857,
+      "end": 216.714,
       "duration": 0.857
     },
     {
       "word": "song",
-      "start": 215.714,
-      "end": 216.571,
+      "start": 216.714,
+      "end": 217.571,
       "duration": 0.857
     },
     {
       "word": "of",
-      "start": 216.571,
-      "end": 217.429,
+      "start": 217.071,
+      "end": 217.929,
       "duration": 0.857
     },
     {
       "word": "heaven",
-      "start": 217.429,
-      "end": 218.286,
+      "start": 217.929,
+      "end": 218.786,
       "duration": 0.857
     },
     {
       "word": "now",
-      "start": 218.286,
-      "end": 219.143,
+      "start": 218.786,
+      "end": 219.643,
       "duration": 0.857
     },
     {
       "word": "begun",
-      "start": 219.143,
-      "end": 220.0,
+      "start": 219.643,
+      "end": 220.5,
       "duration": 0.857
     },
     {
@@ -1380,81 +1362,81 @@
     },
     {
       "word": "But",
-      "start": 226.0,
-      "end": 227.167,
+      "start": 225.5,
+      "end": 226.667,
       "duration": 1.167
     },
     {
       "word": "cling",
-      "start": 227.167,
-      "end": 228.333,
+      "start": 226.667,
+      "end": 227.833,
       "duration": 1.167
     },
     {
       "word": "to",
-      "start": 228.333,
-      "end": 229.5,
+      "start": 227.833,
+      "end": 229.0,
       "duration": 1.167
     },
     {
       "word": "Christ",
-      "start": 229.5,
-      "end": 230.667,
+      "start": 229.0,
+      "end": 230.167,
       "duration": 1.167
     },
     {
       "word": "our",
-      "start": 230.667,
-      "end": 231.833,
+      "start": 230.167,
+      "end": 231.333,
       "duration": 1.167
     },
     {
       "word": "certainty",
-      "start": 231.833,
-      "end": 233.0,
+      "start": 231.333,
+      "end": 232.5,
       "duration": 1.167
     },
     {
       "word": "The",
       "start": 233.0,
-      "end": 234.0,
-      "duration": 1.0
+      "end": 233.875,
+      "duration": 0.875
     },
     {
       "word": "weight",
-      "start": 234.0,
-      "end": 235.0,
-      "duration": 1.0
+      "start": 233.875,
+      "end": 234.75,
+      "duration": 0.875
     },
     {
       "word": "of",
-      "start": 235.0,
-      "end": 236.0,
-      "duration": 1.0
+      "start": 234.75,
+      "end": 235.625,
+      "duration": 0.875
     },
     {
       "word": "glory",
-      "start": 236.0,
-      "end": 237.0,
-      "duration": 1.0
+      "start": 236.5,
+      "end": 237.375,
+      "duration": 0.875
     },
     {
       "word": "yet",
-      "start": 237.0,
-      "end": 238.0,
-      "duration": 1.0
+      "start": 237.375,
+      "end": 238.25,
+      "duration": 0.875
     },
     {
       "word": "to",
-      "start": 238.0,
-      "end": 239.0,
-      "duration": 1.0
+      "start": 238.25,
+      "end": 239.125,
+      "duration": 0.875
     },
     {
       "word": "come",
-      "start": 239.0,
+      "start": 239.125,
       "end": 240.0,
-      "duration": 1.0
+      "duration": 0.875
     },
     {
       "word": "It's",
@@ -1476,69 +1458,69 @@
     },
     {
       "word": "of",
-      "start": 242.571,
-      "end": 243.429,
+      "start": 242.071,
+      "end": 242.929,
       "duration": 0.857
     },
     {
       "word": "heaven",
-      "start": 243.429,
-      "end": 244.286,
+      "start": 242.929,
+      "end": 243.786,
       "duration": 0.857
     },
     {
       "word": "now",
-      "start": 244.286,
-      "end": 245.143,
+      "start": 243.786,
+      "end": 244.643,
       "duration": 0.857
     },
     {
       "word": "begun",
-      "start": 245.143,
-      "end": 246.0,
+      "start": 244.643,
+      "end": 245.5,
       "duration": 0.857
     },
     {
       "word": "It's",
       "start": 246.0,
-      "end": 246.857,
-      "duration": 0.857
+      "end": 247.0,
+      "duration": 1.0
     },
     {
       "word": "the",
-      "start": 246.857,
-      "end": 247.714,
-      "duration": 0.857
+      "start": 247.0,
+      "end": 248.0,
+      "duration": 1.0
     },
     {
       "word": "song",
-      "start": 247.714,
-      "end": 248.571,
-      "duration": 0.857
+      "start": 248.0,
+      "end": 249.0,
+      "duration": 1.0
     },
     {
       "word": "of",
-      "start": 248.571,
-      "end": 249.429,
-      "duration": 0.857
+      "start": 248.5,
+      "end": 249.5,
+      "duration": 1.0
     },
     {
       "word": "heaven",
-      "start": 249.429,
-      "end": 250.286,
-      "duration": 0.857
+      "start": 249.5,
+      "end": 250.5,
+      "duration": 1.0
     },
     {
       "word": "now",
-      "start": 250.286,
-      "end": 251.143,
-      "duration": 0.857
+      "start": 250.5,
+      "end": 251.5,
+      "duration": 1.0
     },
     {
       "word": "begun",
-      "start": 251.143,
-      "end": 252.0,
-      "duration": 0.857
+      "start": 251.5,
+      "end": 252.5,
+      "duration": 1.0
     }
   ]
 }

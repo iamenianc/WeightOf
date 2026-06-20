@@ -1,40 +1,122 @@
-const LINES = [
-  [11.340, "He carried our sins on that rugged tree", "v"],
-  [18.660, "To win our pardon and our victory", "v"],
-  [24.080, "In jars of clay we carry the news", "v"],
-  [30.720, "Christ is risen, grace has broken through", "v"],
-  [37.320, "No condemnation now is ours to dread", "v"],
-  [44.080, "By Your Word the faintest soul is fed", "v"],
-  [49.620, "We have believed and so we loudly speak", "v"],
-  [56.380, "The name of Jesus strength unto the weak", "v"],
-  [62.580, "We do not hope in what is seen", "c"],
-  [69.180, "But cling to Christ our certainty", "c"],
-  [75.040, "The weight of glory yet to come", "c"],
-  [81.740, "It's the song of heaven now begun", "c"],
-  [88.160, "It's the song of heaven now begun", "c"],
-  [97.600, "A new life we live by His mighty hand", "v"],
-  [104.240, "Through every grief to the promised land", "v"],
-  [110.820, "The Spirit's here, He knows our needs", "v"],
-  [117.280, "And from His throne our Savior intercedes", "v"],
-  [124.120, "We do not hope in what is seen", "c"],
-  [129.940, "But cling to Christ our certainty", "c"],
-  [135.800, "The weight of glory yet to come", "c"],
-  [142.740, "It's the song of heaven now begun", "c"],
-  [148.700, "It's the song of heaven now begun", "c"],
-  [168.580, "Beyond the reach of mortal sight", "b"],
-  [174.780, "Yet clearer still than brightest light", "b"],
-  [181.940, "In every trial and every fall", "b"],
-  [187.780, "The hope of glory outweighs them all", "b"],
-  [195.140, "We do not hope in what is seen", "c"],
-  [200.640, "But cling to Christ our certainty", "c"],
-  [206.340, "The weight of glory yet to come", "c"],
-  [213.200, "It's the song of heaven now begun", "c"],
-  [219.380, "We do not hope in what is seen", "c"],
-  [226.160, "But cling to Christ our certainty", "c"],
-  [231.880, "The weight of glory yet to come", "c"],
-  [238.460, "It's the song of heaven now begun", "c"],
-  [244.660, "It's the song of heaven now begun", "c"]
+const LYRIC_OFFSET = 0.0; // Adjust this value to sync lyrics better (positive = delay, negative = advance)
+let els = [];
+let cur = -1;
+
+function getSection(t) {
+  if (t >= 168.580 && t < 195.140) return 'b'; // bridge
+  if ((t >= 62.580 && t < 97.600) || (t >= 124.120 && t < 168.580) || t >= 195.140) return 'c'; // chorus
+  return 'v'; // verse
+}
+
+const LYRIC_SHEET = [
+  "he carried our sins",
+  "on that rugged tree",
+  "to win our pardon",
+  "and our victory",
+  "in jars of clay",
+  "we carry the news",
+  "Christ is risen",
+  "Grace has broken through",
+  "No condemnation now",
+  "is ours to dread",
+  "by your word",
+  "the faintest soul is fed",
+  "We have believed",
+  "and so we loudly speak",
+  "the name of Jesus",
+  "Strength unto the weak",
+  "We do not Hope",
+  "in what is seen",
+  "but cling to Christ",
+  "our certainty",
+  "the weight of glory",
+  "yet to come",
+  "it's the song of heaven",
+  "now begun",
+  "it's the song of heaven",
+  "now begun",
+  "A new life we live",
+  "by his mighty hand",
+  "Through every grief",
+  "to the promised Land",
+  "The Spirit's here",
+  "he knows our needs",
+  "and from his throne",
+  "our saviour intercedes",
+  "We do not Hope",
+  "in what is seen",
+  "but cling to Christ",
+  "our certainty",
+  "the weight of glory",
+  "yet to come",
+  "it's the song of heaven",
+  "now begun",
+  "it's the song of heaven",
+  "now begun",
+  "Beyond the reach",
+  "of mortal sight",
+  "yet clearer still",
+  "than brightest light",
+  "in every trial",
+  "and every fall",
+  "the hope of glory",
+  "outweighs them all",
+  "We do not Hope",
+  "in what is seen",
+  "but cling to Christ",
+  "our certainty",
+  "the weight of glory",
+  "yet to come",
+  "it's the song of heaven",
+  "now begun",
+  "it's the song of heaven",
+  "now begun",
+  "We do not Hope",
+  "in what is seen",
+  "but cling to Christ",
+  "our certainty",
+  "the weight of glory",
+  "yet to come",
+  "it's the song of heaven",
+  "now begun",
+  "it's the song of heaven",
+  "now begun",
+  "it's the song of heaven",
+  "now begun"
 ];
+
+function processWords(rawWords) {
+  const filtered = rawWords.filter(w => {
+    const clean = w.word.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()…?"']/g,"").trim();
+    return clean !== 'music' && clean !== 'hmm';
+  });
+
+  const lines = [];
+  let wordIdx = 0;
+
+  for (const sheetLine of LYRIC_SHEET) {
+    const sheetWords = sheetLine.split(/\s+/).filter(Boolean);
+    if (wordIdx >= filtered.length) break;
+
+    const group = filtered.slice(wordIdx, wordIdx + sheetWords.length);
+    wordIdx += sheetWords.length;
+
+    if (group.length === 0) continue;
+
+    const text = group.map(w => w.word).join(' ');
+    const t = group[0].start;
+    const sec = getSection(t);
+
+    lines.push({
+      t,
+      text,
+      sec,
+      words: group
+    });
+  }
+  return lines;
+}
+
 const aud   = document.getElementById('aud');
 const stage = document.getElementById('stage');
 const gate  = document.getElementById('gate');
@@ -45,41 +127,71 @@ const seek  = document.getElementById('seek');
 const fill  = document.getElementById('fill');
 const knob  = document.getElementById('knob');
 
-/* ---------- build line elements ---------- */
-const els = LINES.map((L)=>{
-  const [t,text,sec] = L;
-  const div = document.createElement('div');
-  div.className = 'line '+sec;
-  const wordsArray = text.split(' ');
-  wordsArray.forEach((w,wi)=>{
-    const s=document.createElement('span');
-    s.className='word'; s.textContent=w;
-    s.style.transitionDelay=(wi*0.085)+'s';
-    
-    // Check for emphasis words (hope, seen, see, christ) ignoring punctuation and case
-    const cleanWord = w.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()…?"']/g,"");
-    if (cleanWord === 'hope' || cleanWord === 'seen' || cleanWord === 'see' || cleanWord === 'christ') {
-      s.classList.add('emphasis');
-    }
-    
-    div.appendChild(s);
-    if (wi < wordsArray.length - 1) {
-      div.appendChild(document.createTextNode(' '));
-    }
-  });
-  stage.appendChild(div);
-  return {t, el:div, words:[...div.querySelectorAll('.word')]};
-});
+async function initTranscript() {
+  try {
+    const response = await fetch('Lyrics/weight_transcript.json');
+    const data = await response.json();
+    const processed = processWords(data.words);
 
-let cur = -1;
+    els = processed.map((L) => {
+      const { t, text, sec, words } = L;
+      const div = document.createElement('div');
+      div.className = 'line ' + sec;
+
+      words.forEach((wObj, wi) => {
+        const s = document.createElement('span');
+        s.className = 'word';
+        s.textContent = wObj.word;
+        s.style.transitionDelay = (wi * 0.085) + 's';
+
+        const cleanWord = wObj.word.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()…?"']/g,"");
+        if (cleanWord === 'hope' || cleanWord === 'seen' || cleanWord === 'see' || cleanWord === 'christ') {
+          s.classList.add('emphasis');
+        }
+
+        div.appendChild(s);
+        if (wi < words.length - 1) {
+          div.appendChild(document.createTextNode(' '));
+        }
+      });
+
+      stage.appendChild(div);
+      return {
+        t,
+        el: div,
+        words: [...div.querySelectorAll('.word')],
+        wordData: words
+      };
+    });
+
+    updateBar();
+  } catch (e) {
+    console.error('Error loading transcript:', e);
+  }
+}
+
+initTranscript();
+
 function showLine(i){ els[i].el.classList.remove('out'); els[i].words.forEach(w=>w.classList.add('in')); }
 function hideLine(i){ els[i].el.classList.add('out'); els[i].words.forEach(w=>w.classList.remove('in')); }
 
 /* recompute which line should be visible for an arbitrary time (handles seeking) */
 function syncLines(force){
-  const t = aud.currentTime;
+  const t = aud.currentTime + LYRIC_OFFSET;
   let idx=-1;
   for(let i=0;i<els.length;i++){ if(els[i].t<=t) idx=i; else break; }
+  
+  if (idx !== -1) {
+    const lineStart = els[idx].t;
+    const nextLineStart = (idx < els.length - 1) ? els[idx+1].t : Infinity;
+    const duration = nextLineStart - lineStart;
+    const cappedDuration = Math.min(duration, 5.3);
+    
+    if (t > lineStart + cappedDuration) {
+      idx = -1;
+    }
+  }
+
   if(idx!==cur || force){
     els.forEach((o,i)=>{
       if(i===idx) {
@@ -131,7 +243,12 @@ addEventListener('touchstart',flashBar);
 
 /* ---------- main loop ---------- */
 function loop(){
-  if(!aud.paused) syncLines(false);
+  if(!aud.paused) {
+    syncLines(false);
+    if (aud.duration && aud.currentTime >= aud.duration - 5.0) {
+      attribution.classList.remove('hide');
+    }
+  }
   updateBar();
   requestAnimationFrame(loop);
 }
@@ -209,13 +326,8 @@ addEventListener('keydown',e=>{
 
 /* ---------- attribution overlay triggers ---------- */
 const attribution = document.getElementById('attribution');
-const closeAttr = document.getElementById('close-attr');
 
 aud.addEventListener('ended', () => {
   attribution.classList.remove('hide');
-});
-
-closeAttr.addEventListener('click', () => {
-  attribution.classList.add('hide');
 });
 

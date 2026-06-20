@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
 
-* { margin:0; padding:0; box-sizing:border-box; font-family: 'Raleway', sans-serif; }
+* { margin:0; padding:0; box-sizing:border-box; font-family: 'Nothing You Could Do', cursive; }
 html,body { height:100%; width:100%; overflow:hidden; background:#fdfdfb; }
 #art { position:fixed; inset:0; z-index:0; }
 #stage {
@@ -15,9 +15,9 @@ html,body { height:100%; width:100%; overflow:hidden; background:#fdfdfb; }
   max-width:80vw;
   will-change:transform,opacity,filter;
 }
-.line.v { font-size:clamp(28px,5.2vw,68px); font-weight:400; }
-.line.c { font-size:clamp(34px,6.4vw,86px); font-weight:600; }
-.line.b { font-size:clamp(26px,4.6vw,58px); font-weight:300; font-style:italic; color:#4a4640; }
+.line.v { font-size:clamp(32px,6.0vw,78px); font-weight:400; }
+.line.c { font-size:clamp(39px,7.4vw,99px); font-weight:600; }
+.line.b { font-size:clamp(30px,5.3vw,67px); font-weight:300; font-style:italic; color:#4a4640; }
 .word {
   display:inline-block;
   opacity:0;
@@ -94,9 +94,9 @@ body:not(.playing) #bar.show { opacity:1; }
   background: rgba(253, 253, 251, 0.95);
   border: 1px solid rgba(42, 39, 34, 0.08);
   box-shadow: 0 20px 40px rgba(42, 39, 34, 0.06);
-  padding: 40px;
+  padding: 60px;
   border-radius: 8px;
-  max-width: 480px;
+  max-width: 640px;
   width: 100%;
   text-align: center;
   will-change: transform, opacity;
@@ -107,7 +107,7 @@ body:not(.playing) #bar.show { opacity:1; }
   to { opacity: 1; transform: translateY(0); }
 }
 .attr-card h3 {
-  font-size: 28px;
+  font-size: 42px;
   font-weight: 300;
   margin-bottom: 24px;
   letter-spacing: 0.02em;
@@ -115,53 +115,37 @@ body:not(.playing) #bar.show { opacity:1; }
 .attr-divider {
   height: 1px;
   background: rgba(42, 39, 34, 0.08);
-  margin: 0 auto 24px;
-  width: 60px;
+  margin: 0 auto 30px;
+  width: 90px;
 }
 .attr-row {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   text-align: left;
 }
 .attr-label {
   display: block;
-  font-size: 11px;
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: #8b8070;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 .attr-value {
   display: block;
-  font-size: 16px;
+  font-size: 26px;
   line-height: 1.4;
   font-weight: 400;
 }
 .attr-footer {
-  margin-top: 36px;
+  margin-top: 48px;
 }
 .attr-footer p {
-  font-size: 12px;
+  font-size: 16px;
   color: #8b8070;
   margin-bottom: 20px;
   letter-spacing: 0.02em;
 }
-#close-attr {
-  background: #2a2722;
-  color: #fdfdfb;
-  border: none;
-  padding: 12px 28px;
-  font-size: 14px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.2s ease, transform 0.15s ease;
-}
-#close-attr:hover {
-  background: #4a4640;
-  transform: translateY(-1px);
-}
-#close-attr:active {
-  transform: translateY(0);
-}
+
 
 /* ---- word emphasis highlights ---- */
 .word.emphasis {
@@ -182,3 +166,4 @@ body:not(.playing) #bar.show { opacity:1; }
   transform: translateY(-0.3em) scale(1.12);
   filter: blur(8px);
 }
+
