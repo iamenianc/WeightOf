@@ -14,18 +14,19 @@
       <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise" />
       <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.8" xChannelSelector="R" yChannelSelector="G" />
     </filter>
+    <radialGradient id="feather-gradient" cx="50%" cy="50%" r="50%">
+      <stop offset="50%" stop-color="white" stop-opacity="1" />
+      <stop offset="96%" stop-color="white" stop-opacity="0" />
+    </radialGradient>
+    <mask id="feather-mask">
+      <rect x="0" y="0" width="400" height="400" fill="black" />
+      <circle cx="200" cy="200" r="200" fill="url(#feather-gradient)" />
+    </mask>
   </defs>
 
-  <!-- Acoustic Guitar Rosetta (Static background, large radius, handdrawn filter applied) -->
-  <g class="rosetta" filter="url(#handdrawn)">
-    <circle cx="200" cy="200" r="50" fill="none" stroke="#2a2722" stroke-width="4.5" />
-    <circle cx="200" cy="200" r="56" fill="none" stroke="#8b8070" stroke-width="1.5" stroke-dasharray="3 3" />
-    <circle cx="200" cy="200" r="62" fill="none" stroke="#2a2722" stroke-width="3" />
-    <circle cx="200" cy="200" r="68" fill="none" stroke="#8b8070" stroke-width="4" stroke-dasharray="8 4" />
-    <circle cx="200" cy="200" r="74" fill="none" stroke="#2a2722" stroke-width="1.5" />
-    <circle cx="200" cy="200" r="80" fill="none" stroke="#8b8070" stroke-width="2.5" stroke-dasharray="2 6" />
-    <circle cx="200" cy="200" r="86" fill="none" stroke="#2a2722" stroke-width="1" />
-  </g>
+  <g mask="url(#feather-mask)">
+    <!-- Acoustic Guitar Image background layer -->
+    <image href="guitar_strum.jpg" x="0" y="0" width="400" height="400" preserveAspectRatio="xMidYMid slice" opacity="0.9" />
 
   <!-- Strings on the neck -->
   <g class="strings">
@@ -63,6 +64,7 @@
     
     <circle cx="230" cy="358" r="3.5" fill="#eae5d9" stroke="#3d372e" stroke-width="1" />
     <circle cx="230" cy="358" r="1" fill="#3d372e" />
+  </g>
   </g>
 </svg>
 <div id="stage"></div>

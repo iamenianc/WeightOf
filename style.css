@@ -54,9 +54,9 @@ body.playing #guitar-illustration .string-6 { animation-delay: 0.10s; }
   max-width:80vw;
   will-change:transform,opacity,filter;
 }
-.line.v { font-size:clamp(32px,6.0vw,78px); font-weight:400; }
+.line.v { font-size:clamp(35px,6.7vw,88px); font-weight:400; }
 .line.c { font-size:clamp(39px,7.4vw,99px); font-weight:600; }
-.line.b { font-size:clamp(30px,5.3vw,67px); font-weight:300; font-style:italic; color:#4a4640; }
+.line.b { font-size:clamp(31px,5.8vw,78px); font-weight:300; font-style:italic; color:#4a4640; }
 .word {
   display:inline-block;
   opacity:0;
