@@ -1,0 +1,22 @@
+# System files
+Thumbs.db
+db.json
+Desktop.ini
+.DS_Store
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Environment/Agent settings
+.claude/
+.gemini/
+.agents/
+.env
+.env.local
+.env.*.local
