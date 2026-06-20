@@ -3,6 +3,45 @@
 * { margin:0; padding:0; box-sizing:border-box; font-family: 'Nothing You Could Do', cursive; }
 html,body { height:100%; width:100%; overflow:hidden; background:#fdfdfb; }
 #art { position:fixed; inset:0; z-index:0; }
+#guitar-illustration {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  width: min(380px, 70vw);
+  height: auto;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: multiply;
+  transition: opacity 1.2s cubic-bezier(.2,.7,.2,1),
+              transform 1.4s cubic-bezier(.2,.7,.2,1);
+}
+body.playing #guitar-illustration {
+  opacity: 0.18;
+  transform: translate(-50%, -50%) scale(1);
+}
+body.playing #guitar-illustration .string {
+  animation: string-pulse 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) infinite;
+  transform-origin: center;
+}
+body.playing #guitar-illustration .string-1 { animation-delay: 0.00s; }
+body.playing #guitar-illustration .string-2 { animation-delay: 0.02s; }
+body.playing #guitar-illustration .string-3 { animation-delay: 0.04s; }
+body.playing #guitar-illustration .string-4 { animation-delay: 0.06s; }
+body.playing #guitar-illustration .string-5 { animation-delay: 0.08s; }
+body.playing #guitar-illustration .string-6 { animation-delay: 0.10s; }
+
+@keyframes string-pulse {
+  0%, 100% {
+    transform: scaleX(1);
+    opacity: 0.35;
+  }
+  15% {
+    transform: scaleX(1.15);
+    opacity: 0.85;
+  }
+}
 #stage {
   position:fixed; inset:0; z-index:2;
   display:flex; align-items:center; justify-content:center;

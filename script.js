@@ -25,16 +25,21 @@ const LYRIC_SHEET = [
   "and so we loudly speak",
   "the name of Jesus",
   "Strength unto the weak",
+  
+  // Chorus 1
   "We do not Hope",
   "in what is seen",
   "but cling to Christ",
   "our certainty",
   "the weight of glory",
   "yet to come",
-  "it's the song of heaven",
+  "it's the song",
+  "of heaven",
   "now begun",
-  "it's the song of heaven",
+  "it's the song",
+  "of heaven",
   "now begun",
+  
   "A new life we live",
   "by his mighty hand",
   "Through every grief",
@@ -43,16 +48,21 @@ const LYRIC_SHEET = [
   "he knows our needs",
   "and from his throne",
   "our saviour intercedes",
+  
+  // Chorus 2
   "We do not Hope",
   "in what is seen",
   "but cling to Christ",
   "our certainty",
   "the weight of glory",
   "yet to come",
-  "it's the song of heaven",
+  "it's the song",
+  "of heaven",
   "now begun",
-  "it's the song of heaven",
+  "it's the song",
+  "of heaven",
   "now begun",
+  
   "Beyond the reach",
   "of mortal sight",
   "yet clearer still",
@@ -61,27 +71,30 @@ const LYRIC_SHEET = [
   "and every fall",
   "the hope of glory",
   "outweighs them all",
+  
+  // Chorus 3
   "We do not Hope",
   "in what is seen",
   "but cling to Christ",
   "our certainty",
   "the weight of glory",
   "yet to come",
-  "it's the song of heaven",
+  "it's the song",
+  "of heaven",
   "now begun",
-  "it's the song of heaven",
-  "now begun",
+  
+  // Chorus 4
   "We do not Hope",
   "in what is seen",
   "but cling to Christ",
   "our certainty",
   "the weight of glory",
   "yet to come",
-  "it's the song of heaven",
+  "it's the song",
+  "of heaven",
   "now begun",
-  "it's the song of heaven",
-  "now begun",
-  "it's the song of heaven",
+  "it's the song",
+  "of heaven",
   "now begun"
 ];
 
@@ -145,7 +158,7 @@ async function initTranscript() {
         s.style.transitionDelay = (wi * 0.085) + 's';
 
         const cleanWord = wObj.word.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()…?"']/g,"");
-        if (cleanWord === 'hope' || cleanWord === 'seen' || cleanWord === 'see' || cleanWord === 'christ') {
+        if (cleanWord === 'hope' || cleanWord === 'seen' || cleanWord === 'see' || cleanWord === 'christ' || cleanWord === 'glory' || cleanWord === 'certainty') {
           s.classList.add('emphasis');
         }
 
@@ -165,6 +178,7 @@ async function initTranscript() {
     });
 
     updateBar();
+    attemptAutoplay();
   } catch (e) {
     console.error('Error loading transcript:', e);
   }
@@ -185,7 +199,7 @@ function syncLines(force){
     const lineStart = els[idx].t;
     const nextLineStart = (idx < els.length - 1) ? els[idx+1].t : Infinity;
     const duration = nextLineStart - lineStart;
-    const cappedDuration = Math.min(duration, 5.3);
+    const cappedDuration = Math.min(duration, 6.0);
     
     if (t > lineStart + cappedDuration) {
       idx = -1;
@@ -263,10 +277,11 @@ let W,H,DPR;
 function resize(){ DPR=Math.min(devicePixelRatio||1,2); W=cv.width=innerWidth*DPR; H=cv.height=innerHeight*DPR; cv.style.width=innerWidth+'px'; cv.style.height=innerHeight+'px'; }
 resize(); addEventListener('resize',resize);
 
-let analyser, freqData, level=0;
+let analyser, freqData, level=0, AC;
 function initAudio(){
+  if (analyser) return;
   try{
-    const AC = new (window.AudioContext||window.webkitAudioContext)();
+    AC = new (window.AudioContext||window.webkitAudioContext)();
     if(AC.state==='suspended') AC.resume();
     const src = AC.createMediaElementSource(aud);
     analyser = AC.createAnalyser(); analyser.fftSize=256;
@@ -309,13 +324,26 @@ paint();
 
 /* ---------- start ---------- */
 aud.addEventListener('loadedmetadata',updateBar);
+let started = false;
 function start(){
+  if(started) return;
+  started = true;
   initAudio();
+  if(AC && AC.state === 'suspended') AC.resume();
   const p = aud.play();
   if(p&&p.catch) p.catch(()=>{});
   gate.classList.add('hidden');
   setPP(); flashBar();
   requestAnimationFrame(loop);
+}
+async function attemptAutoplay() {
+  initAudio();
+  try {
+    await aud.play();
+    start();
+  } catch(e) {
+    console.log("Autoplay blocked, waiting for click.", e);
+  }
 }
 gate.addEventListener('click',start);
 addEventListener('keydown',e=>{
