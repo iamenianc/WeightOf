@@ -55,9 +55,9 @@ const els = LINES.map((L)=>{
     s.className='word'; s.textContent=w+' ';
     s.style.transitionDelay=(wi*0.085)+'s';
     
-    // Check for emphasis words (hope, seen, see) ignoring punctuation and case
+    // Check for emphasis words (hope, seen, see, christ) ignoring punctuation and case
     const cleanWord = w.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()…?"']/g,"");
-    if (cleanWord === 'hope' || cleanWord === 'seen' || cleanWord === 'see') {
+    if (cleanWord === 'hope' || cleanWord === 'seen' || cleanWord === 'see' || cleanWord === 'christ') {
       s.classList.add('emphasis');
     }
     
@@ -133,9 +133,9 @@ function loop(){
 }
 
 /* ---------- abstract generative art ---------- */
-const ARTWORK_STRENGTH = 2.0; // Adjusts the opacity/strength of the colored artwork (1.0 = default, 2.0 = stronger, 0.5 = weaker)
-const ARTWORK_SIZE     = 1.1; // Adjusts the diameter/size of the colored blobs (1.0 = default, 1.5 = larger, 0.7 = smaller)
-const ARTWORK_SPEED    = 4.0; // Adjusts the speed of the blob movement animation (1.0 = default, 2.0 = double speed, 0.5 = half speed)
+const ARTWORK_STRENGTH = 2.1; // Adjusts the opacity/strength of the colored artwork (1.0 = default, 2.0 = stronger, 0.5 = weaker)
+const ARTWORK_SIZE     = 1.5; // Adjusts the diameter/size of the colored blobs (1.0 = default, 1.5 = larger, 0.7 = smaller)
+const ARTWORK_SPEED    = 3.1; // Adjusts the speed of the blob movement animation (1.0 = default, 2.0 = double speed, 0.5 = half speed)
 const cv = document.getElementById('art');
 const ctx = cv.getContext('2d');
 let W,H,DPR;
